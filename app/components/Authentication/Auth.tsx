@@ -6,7 +6,7 @@ import Input from "./Input";
 export const Auth = () => {
   const theme = useMantineTheme();
   return (
-    <div className=" flex flex-col justify-center gap-28">
+    <div className=" flex flex-col justify-center gap-28 w-full md:w-1/2">
       <div className="mt-8">
         <h4 className="text-center text-xl">SmartSave</h4>
       </div>
@@ -25,19 +25,19 @@ export const Auth = () => {
           color="dark"
           radius="sm"
           defaultValue="gallery"
-          className="w-[70%] mx-auto flex mt-4 flex-col sm:w-[60%]"
+          className="w-[70%] mx-auto flex mt-4 flex-col sm:w-[55%] md:w-4/5 lg:w-[75%] xl:w-[60%]"
         >
           <Box className=" bg-gray-300 rounded-md">
             <Tabs.List className="flex gap-0 justify-between w-full box-border p-[3px]">
               <Tabs.Tab
                 value="gallery"
-                className=" w-1/2 py-[10px] text-xs font-semibold sm:py-3 sm:text-sm"
+                className=" w-1/2 py-[10px] text-xs font-semibold sm:py-3 sm:text-sm lg:py-4 lg:text-md"
               >
                 Sign In
               </Tabs.Tab>
               <Tabs.Tab
                 value="messages"
-                className=" w-1/2 py-[10px] text-xs font-semibold sm:py-3 sm:text-sm"
+                className=" w-1/2 py-[10px] text-xs font-semibold sm:py-3 sm:text-sm lg:py-4 lg:text-md"
               >
                 Signup
               </Tabs.Tab>
@@ -52,7 +52,7 @@ export const Auth = () => {
           </Tabs.Panel>
         </Tabs>
       </div>
-      <p className="text-gray-400 text-xs w-[90%] mx-auto text-left">
+      <p className="text-gray-400 text-xs w-[90%] mx-auto text-left sm:w-[55%]">
         Join the millions of smart investions who trust us to manage their
         finances.Log in to access your personalized dashboard, track your
         portfolio performance, and make informed investment decisions.
