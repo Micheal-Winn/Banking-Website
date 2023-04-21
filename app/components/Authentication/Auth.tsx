@@ -25,14 +25,20 @@ export const Auth = () => {
           color="dark"
           radius="sm"
           defaultValue="gallery"
-          className="w-[70%] mx-auto flex mt-4 flex-col"
+          className="w-[70%] mx-auto flex mt-4 flex-col sm:w-[60%]"
         >
           <Box className=" bg-gray-300 rounded-md">
             <Tabs.List className="flex gap-0 justify-between w-full box-border p-[3px]">
-              <Tabs.Tab value="gallery" className=" w-1/2 py-2 text-xs font-semibold">
+              <Tabs.Tab
+                value="gallery"
+                className=" w-1/2 py-[10px] text-xs font-semibold sm:py-3 sm:text-sm"
+              >
                 Sign In
               </Tabs.Tab>
-              <Tabs.Tab value="messages" className=" w-1/2 py-2 text-xs font-semibold">
+              <Tabs.Tab
+                value="messages"
+                className=" w-1/2 py-[10px] text-xs font-semibold sm:py-3 sm:text-sm"
+              >
                 Signup
               </Tabs.Tab>
             </Tabs.List>
@@ -47,7 +53,7 @@ export const Auth = () => {
         </Tabs>
       </div>
       <p className="text-gray-400 text-xs w-[90%] mx-auto text-left">
-      Join the millions of smart investions who trust us to manage their
+        Join the millions of smart investions who trust us to manage their
         finances.Log in to access your personalized dashboard, track your
         portfolio performance, and make informed investment decisions.
       </p>
