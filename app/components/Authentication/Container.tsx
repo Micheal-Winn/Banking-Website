@@ -8,7 +8,7 @@ const Container:React.FC<ContainerProps> = ({
     children
 })=> {
     return(
-        <div className="w-full flex bg-inherit">
+        <div className="w-full flex bg-inherit flex-row-reverse">
             {children}
         </div>
     )
