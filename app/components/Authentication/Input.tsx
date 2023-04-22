@@ -1,16 +1,13 @@
 import {
-  TextInput,
   Box,
-  Button,
-  Group,
   Checkbox,
   Anchor,
-  Text,
-  MediaQuery,
+
 } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
+
 
 import { useForm, isEmail, hasLength } from "@mantine/form";
+import { CustomInput } from "./CustomInput";
 
 interface AuthProps {
   login: boolean;
@@ -28,7 +25,6 @@ export default function Input(props: AuthProps) {
     },
   });
 
-  const matches = useMediaQuery("max-width:760px");
 
   const handleSubmit = (values: any) => console.log(values);
 
@@ -36,29 +32,13 @@ export default function Input(props: AuthProps) {
     <>
       <form onSubmit={form.onSubmit(handleSubmit)}>
         {props.login && (
-          <TextInput
-            size="md"
-            label={<Text className="sm:text-[15px] md:text-lg md:mb-1">Username</Text>}
-            placeholder="Enter your name"
-            className="mt-4"
-            {...form.getInputProps("username")}
-          />
+
+          <CustomInput placeholder="Enter your name" text="Username" props={form.getInputProps("username")}/>
         )}
-        <TextInput
-        size="md"
-          label={<Text className="sm:text-[15px] md:text-lg md:mb-1">Email</Text>}
-          placeholder="Enter your email"
-          className="mt-4"
-          {...form.getInputProps("email")}
-        />
-        <TextInput
-            size="md"
-          label={<Text className="sm:text-[15px] md:text-lg md:mb-1">Password</Text>}
-          type="password"
-          placeholder="Enter your password"
-          className="mt-4"
-          {...form.getInputProps("password")}
-        />
+        
+        <CustomInput placeholder="Enter your email" text="Email" props={form.getInputProps("email")}/>
+          
+        <CustomInput placeholder="Enter your password" text="Password" props={form.getInputProps("password")}/>
 
         <Box className="mt-4 flex align-middle">
           <Checkbox
@@ -67,7 +47,7 @@ export default function Input(props: AuthProps) {
             label={
               <>
                 <p className="lg:text-base">
-                I accept <Anchor href="">terms and conditions</Anchor>
+                  I accept <Anchor href="">terms and conditions</Anchor>
                 </p>
               </>
             }
@@ -80,7 +60,7 @@ export default function Input(props: AuthProps) {
         >
           {props.login ? "Sign Up" : "Sign In"}
         </button>
-          {/* <Button type="submit" size="md" mt="lg" color="dark" className="bg-black w-full text-sm sm:text-sm">
+        {/* <Button type="submit" size="md" mt="lg" color="dark" className="bg-black w-full text-sm sm:text-sm">
            {props.login ? "Sign Up" : "Sign In"}
         </Button> */}
       </form>

@@ -4,6 +4,7 @@ import React from 'react'
 import Container from './Container'
 import { Auth } from './Auth'
 import SidePhoto from './SidePhoto'
+import { MediaQuery } from '@mantine/core'
 
 type Props = {}
 
