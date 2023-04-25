@@ -1,3 +1,5 @@
+import { NavbarType } from "@/Types";
+
 export const navLists:Array<NavbarType> = [
     {
         name:"Home",
