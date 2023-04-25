@@ -6,6 +6,7 @@ import AuthenticationPage from './components/Authentication/AuthenticationPage'
 import { MantineProvider } from '@mantine/core'
 import { Navbar } from './components/Navbar/Navbar'
 import BannerHome from './components/HeroSections/BannerHome'
+import FeatureSection from './components/HeroSections/FeatureSection/FeatureSection'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,6 +16,7 @@ export default function Home() {
     <main>
       <Navbar/>
       <BannerHome/>
+      <FeatureSection/>
     </main>
   )
 }
