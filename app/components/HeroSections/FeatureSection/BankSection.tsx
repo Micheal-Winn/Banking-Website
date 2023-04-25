@@ -16,7 +16,7 @@ const BankSection = () => {
         </p>
         <div className="w-[140px] sm:w-[160px] md:w-[140px] lg:w-[170px] mx-auto lg:mx-0"><Button/></div>
       </div>
-      <div className=" h-[550px] md:h-[400px] w-full lg:w-[60%]">
+      <div className=" h-[550px] md:h-[400px] w-full lg:w-[60%] xl:pt-24">
        <div className="relative w-full h-full">
         <Image src={'/images/bankStatic.gif'} alt="bank statisc" fill style={{objectFit:"cover"}}/>
        </div>
