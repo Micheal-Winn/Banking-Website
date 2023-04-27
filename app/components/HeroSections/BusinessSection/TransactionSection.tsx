@@ -5,15 +5,15 @@ import Image from "next/image";
 
 const TransactionSection = () => {
   return (
-    <section className="flex container sm:pl-10 flex-col-reverse lg:flex-row">
-      <div className=" flex flex-col gap-3 sm:gap-4 md:gap-6 lg:gap-4 w-full lg:w-[45%] text-center lg:text-left px-2 sm:px-0">
+    <section className="flex container sm:pl-10 md:pl-5 flex-col-reverse md:flex-row">
+      <div className=" flex flex-col gap-3 sm:gap-4 md:gap-6 lg:gap-4 w-full lg:w-[45%] text-center md:text-left px-2 sm:px-0">
         <h2 className="text-[#5265CA] sm:text-base lg:text-xl uppercase tracking-widest font-bold ">Transaction</h2>
-        <h3 className="text-4xl sm:text-[2.5rem] xl:text-6xl font-bold xl:font-extrabold leading-tight">Stay Up to Date about your transaction</h3>
-        <p className="text-[#C9D0DD] w-[80%] sm:w-[70%] md:w-[60%] mx-auto lg:mx-0 lg:w-[85%] text-sm xl:text-base">
+        <h3 className="text-4xl sm:text-[2.5rem] md:text-4xl xl:text-6xl font-bold xl:font-extrabold leading-tight">Stay Up to Date about your transaction</h3>
+        <p className="text-[#C9D0DD] w-[80%] sm:w-[70%] md:w-[80%] mx-auto md:mx-0 lg:mx-0 lg:w-[85%] text-sm xl:text-base">
           It is time to make the world finance simpler,smarter and fit for
           modern life. It is time to say goodbye to the aid.
         </p>
-        <div className="flex flex-col gap-4 sm:gap-4 sm:w-[90%]  lg:w-full md:gap-6 lg:gap-4 mb-2 px-4 md:px-0 ">
+        <div className="flex flex-col gap-4 sm:gap-4 sm:w-[50%] md:w-[90%] mx-auto md:mx-0 lg:w-full md:gap-6 lg:gap-4 mb-2 px-4 md:px-0 ">
           <div className="flex items-center  gap-5">
             <div className="bg-[#E7EAE9] h-[25px] w-[25px] rounded-full p-[1.4px] flex items-center justify-center">
               <BiCheck color="blue" />
@@ -37,7 +37,7 @@ const TransactionSection = () => {
           </div>
         </div>
         {/**Button */}
-        <div className="w-[140px] sm:w-[160px] md:w-[140px] lg:w-[170px] mx-auto lg:mx-0 md:mb-3 lg:mb-0">
+        <div className="w-[140px] sm:w-[160px] md:w-[140px] lg:w-[170px] mx-auto md:mx-0 md:mb-3 lg:mb-0">
 
         <Button  />
         </div>
