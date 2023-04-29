@@ -3,7 +3,7 @@ import TransactionSection from "./TransactionSection";
 
 const BusinessSection = () => {
   return (
-    <section className="h-screen flex flex-col pt-6 gap-8 bg-white">
+    <section className="box-border  h-auto 2xl:h-screen overflow-hidden flex flex-col pt-6 gap-8 bg-white">
       <div className="flex flex-col gap-3 text-center">
         <h2 className="text-[#5265CA] sm:text-base lg:text-xl uppercase tracking-widest font-bold text-center ">
           Easier

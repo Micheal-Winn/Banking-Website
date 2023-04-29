@@ -4,7 +4,7 @@ import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram , IconBuildingBa
 
 const useStyles = createStyles((theme) => ({
     footer: {
-      marginTop: rem(120),
+      marginTop: rem(30),
       paddingTop: `calc(${theme.spacing.xl} * 2)`,
       paddingBottom: `calc(${theme.spacing.xl} * 2)`,
       backgroundColor:
@@ -52,7 +52,8 @@ const useStyles = createStyles((theme) => ({
       flexWrap: "wrap",
   
       [theme.fn.smallerThan("sm")]: {
-        display: "none",
+        display: "flex",
+        marginTop:"1rem"
       },
     },
   
@@ -93,6 +94,8 @@ const useStyles = createStyles((theme) => ({
       borderTop: `${rem(1)} solid ${
         theme.colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.gray[2]
       }`,
+
+
   
       [theme.fn.smallerThan("sm")]: {
         flexDirection: "column",
@@ -150,7 +153,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
       </Container>
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
-          © 2020 mantine.dev. All rights reserved.
+          © 2023 smart.save. All rights reserved.
         </Text>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
