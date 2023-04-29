@@ -9,9 +9,9 @@ export function Footer() {
     <section className="box-border  sm:h-auto md:h-screen flex flex-col justify-between overflow-hidden bg-blue-50">
       <div className="container flex flex-col md:flex-row pt-[2rem] sm:px-10 2xl:px-0 gap-10 md:gap-0">
         <div className="w-[100%] md:w-[50%] flex-col sm:flex md:flex-col gap-20 pl-2 sm:pl-0">
-          <div className="flex flex-col gap-5  md:text-center">
+          <div className="flex flex-col gap-5 text-left">
             <h2 className="text-2xl sm:text-3xl font-bold uppercase">Get in touch</h2>
-            <p className="text-xs sm:w-[100%] lg:w-[75%] xl:w-[90%] md:w-[85%] mx-auto xl:mx-0 xl:text-sm md:text-xs text-[#b1b5bc]">
+            <p className="text-xs sm:w-[100%] lg:w-[75%] xl:w-[65%] md:w-[85%]  xl:text-sm md:text-xs text-[#b1b5bc]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
               veniam inventore. Delectus odio assumenda, corporis, dolores
               labore quam non vitae quo nisi est perspiciatis cumque! Doloribus
