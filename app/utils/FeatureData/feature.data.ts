@@ -1,7 +1,9 @@
 import {RiSecurePaymentFill} from "react-icons/ri"
 import {MdOutlineWeb} from "react-icons/md"
 import {BsFillShieldLockFill} from "react-icons/bs"
-import { FeatureIconsProps } from "@/Types";
+import { ContactType, FeatureIconsProps } from "@/Types";
+
+import {IconHeadset,IconMail,IconMap} from '@tabler/icons-react'
 
 
 
@@ -23,5 +25,21 @@ export const businessService:Array<FeatureIconsProps> =[
         label:"Verivied and Secure",
         text:"We always think about your safety.That's why we make it Rock Tight Secured and also verivied by your trusted.",
         bgcolor:"bg-[#9854C1]"
+    }
+]
+
+
+export const contact:Array<ContactType> =[
+    {
+        icon:IconMail,
+        text:"thant.zin.windev@gmail.com"
+    },
+    {
+        icon:IconHeadset,
+        text:"09985099050"
+    },
+    {
+        icon:IconMap,
+        text:"Thanlyin,Yangon"
     }
 ]
