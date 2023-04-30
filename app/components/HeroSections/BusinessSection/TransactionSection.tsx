@@ -37,7 +37,7 @@ const TransactionSection = () => {
           </div>
         </div>
         {/**Button */}
-        <div className="w-[140px] sm:w-[160px] md:w-[140px] lg:w-[170px] mx-auto md:mx-0 md:mb-3 lg:mb-0">
+        <div className="w-[140px] sm:w-[160px] md:w-[140px] lg:w-[170px] mx-auto md:mx-0 md:mb-3 lg:mb-2">
 
         <Button  />
         </div>
