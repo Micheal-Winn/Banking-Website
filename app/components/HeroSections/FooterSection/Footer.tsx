@@ -20,8 +20,8 @@ export function Footer() {
           </div>
 
           <div className="flex flex-col gap-6 mt-5 sm:mt-0 sm:gap-10 ">
-            {contact.map((address, i) => (
-              <div key={i} className="flex items-center  md:gap-6 ">
+            {contact.map((address) => (
+              <div key={address.text} className="flex items-center  md:gap-6 ">
                 <address.icon size={30} color="#5265CA" />
                 <p className="pl-2 text-sm sm:text-base">{address.text}</p>
               </div>
