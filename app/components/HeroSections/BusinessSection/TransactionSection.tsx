@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const TransactionSection = () => {
   return (
-    <section className="flex container h-auto sm:pl-10 md:pl-5 flex-col-reverse md:flex-row">
+    <section className="flex container  sm:pl-10 md:pl-5 flex-col-reverse md:flex-row">
       <div className=" flex flex-col gap-3 sm:gap-4 md:gap-6 lg:gap-4 w-full lg:w-[45%] text-center md:text-left px-2 sm:px-0">
         <h2 className="text-[#5265CA] sm:text-base lg:text-xl uppercase tracking-widest font-bold ">Transaction</h2>
         <h3 className="text-4xl sm:text-[2.5rem] md:text-4xl xl:text-6xl font-bold xl:font-extrabold leading-tight">Stay Up to Date about your transaction</h3>
