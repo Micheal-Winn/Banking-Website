@@ -5,7 +5,7 @@ import React from "react";
 
 const QuestionSection = () => {
   return (
-    <section className="sm:min-h-screen lg:pb-6 flex flex-col justify-center overflow-hidden items-center 2xl:gap-[8rem] xl:gap-[6rem] lg:gap-[9rem] md:gap-[8rem] sm:gap-[6rem] gap-[4rem] text-center xl:mt-3">
+    <section id="payment" className="sm:min-h-screen lg:pb-6 flex flex-col justify-center overflow-hidden items-center 2xl:gap-[8rem] xl:gap-[6rem] lg:gap-[9rem] md:gap-[8rem] sm:gap-[6rem] gap-[4rem] text-center xl:mt-3">
       <div>
         <h2 className="text-[#5265CA] text-3xl sm:text-5xl mb-14 uppercase font-bold mt-6">Question</h2>
         <h3 className="w-[300px] sm:w-[600px] text-4xl sm:text-7xl font-bold">Frequently Asked Questions</h3>

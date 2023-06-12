@@ -6,7 +6,7 @@ import ReportForm from "./ReportForm";
 export function Footer() {
   //to make bg change by scrolling
   return (
-    <section className="box-border min-h-screen flex flex-col justify-between overflow-hidden bg-blue-50">
+    <section id="help" className="box-border min-h-screen flex flex-col justify-between overflow-hidden bg-blue-50">
       <div className="container flex flex-col md:flex-row pt-[2rem] sm:px-10 2xl:px-0 gap-10 md:gap-0">
         <div className="w-[100%] md:w-[50%] flex-col sm:flex md:flex-col gap-20 pl-2 sm:pl-0">
           <div className="flex flex-col gap-5 text-left">

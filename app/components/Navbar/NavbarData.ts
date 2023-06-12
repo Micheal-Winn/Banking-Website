@@ -3,23 +3,23 @@ import { NavbarType } from "@/Types";
 export const navLists:Array<NavbarType> = [
     {
         name:"Home",
-        link:"#home"
+        link:"home"
     },
     {
         name:"Features",
-        link:"#features"
+        link:"features"
     },
     {
         name:"Business",
-        link:"#business"
+        link:"business"
     },
     {
         name:"Payments",
-        link:"#payment"
+        link:"payment"
     },
     {
         name:"Help",
-        link:"#help"
+        link:"help"
     },
 ];
 

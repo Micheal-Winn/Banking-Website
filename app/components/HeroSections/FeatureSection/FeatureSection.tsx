@@ -6,7 +6,7 @@ import BankSection from "./BankSection";
 
 const FeatureSection = () => {
   return (
-    <section className="min-h-screen flex flex-col pt-12">
+    <section id="features" className="min-h-screen flex flex-col pt-12">
       {/** Provide feature */}
       <div className="flex flex-col text-center">
         <div className="flex flex-col gap-4">
