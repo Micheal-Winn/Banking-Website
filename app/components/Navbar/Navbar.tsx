@@ -14,19 +14,19 @@ const navContainer = {
   show:{
     opacity:1,
     transition:{
-      staggerChildren:0.3,
+      staggerChildren:0.4,
       ease:"easeInOut"
     }
   }
 };
 
 const navItem = {
-  hidden:{opacity:0,y:20},
+  hidden:{opacity:0,y:40},
   show:{
     opacity:1,
     y:0,
     transition:{
-      duration:1,
+      duration:2,
       type:"spring",
       ease:"easeInOut"
     }
@@ -42,12 +42,12 @@ export const Navbar = () => {
   return (
     <>
       <nav className="flex items-center justify-between px-4 md:px-8 lg:px-8 xl:px-14 pt-6 w-full h-[70px]">
-        <motion.div initial={{opacity:0,y:20}} animate={{opacity:1,y:0,transition:{duration:1,ease:"easeInOut",type:"spring"}}}>
+        <motion.div initial={{opacity:0,y:40}} animate={{opacity:1,y:0,transition:{duration:2,ease:"easeInOut",type:"spring"}}}>
           <Link href={"/"} className="text-[#2F3460] font-bold text-xl">
             Smart Save
           </Link>
         </motion.div>
-        <motion.div className="hidden lg:block" initial="hidden" animate="show" variants={navContainer}>
+        <motion.div className="hidden lg:block overflow-hidden" initial="hidden" animate="show" variants={navContainer} >
           {/* <ul className="flex gap-20 lg:gap-8 xl:gap-16 2xl:gap-24 items-center justify-items-center">
             {navLists.map((li, index) => (
               <Link href={li.link} key={index}>
