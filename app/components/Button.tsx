@@ -8,7 +8,7 @@ const button = {
     y:0,
     transition:{
       duration:1.5,
-      delay:0.9,
+      delay:0.7,
       type:"spring",
       ease:"easeInOut"
     }
