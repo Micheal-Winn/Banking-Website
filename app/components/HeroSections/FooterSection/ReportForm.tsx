@@ -9,8 +9,8 @@ const ReportForm = () => {
     }
 
     return (
-        <Form.Root className="w-[260px] sm:w-[350px] mx-auto md:mx-0 lg:w-[400px] py-8 sm:py-14 rounded-xl shadow-2xl px-4 sm:px-10" onSubmitCapture={handleSubmit}>
-        <Form.Field className="grid mb-[10px] text-xl sm:text-2xl uppercase font-bod" name='title'>
+        <Form.Root className="bg-white w-[260px] sm:w-[350px] mx-auto md:mx-0 lg:w-[400px] py-8 sm:py-14 rounded-xl shadow-2xl px-4 sm:px-10" onSubmitCapture={handleSubmit}>
+        <Form.Field className="grid mb-[10px] text-xl sm:text-2xl uppercase font-bod text-black" name='title'>
             <Form.Label>Feedback</Form.Label>
         </Form.Field>
         <Form.Field className="grid mb-[10px]" name="name">
