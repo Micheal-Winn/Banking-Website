@@ -10,17 +10,18 @@ export function Footer() {
   //to make bg change by scrolling
   return (
     <AnimatePresence>
-    <motion.section  id="help"  whileInView={{ backgroundColor: "#eff6ff" }}
+    <motion.section  id="help"  whileInView={{ backgroundColor: "#eff6ff",transition:{
+      duration:0.8,
+      delay:0.8,
+      ease:"easeInOut"
+    } }}
       initial={{ backgroundColor: "#ffff" }}
       exit={{
         opacity: 0,
         backgroundColor: "#ffff",
         transition: { backgroundColor: { delay: 0 }, opacity: { delay: 0.1 } }
       }}
-      transition={{
-        duration: 0.6,
-        delay: 1
-      }} className={`box-border min-h-screen flex flex-col justify-between overflow-hidden `}>
+       className={`box-border min-h-screen flex flex-col justify-between overflow-hidden `}>
       <div className="container flex flex-col md:flex-row pt-[2rem] sm:px-10 2xl:px-0 gap-10 md:gap-0">
         <div className="w-[100%] md:w-[50%] flex-col sm:flex md:flex-col gap-20 pl-2 sm:pl-0">
           <div className="flex flex-col gap-5 text-left">
