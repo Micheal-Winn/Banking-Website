@@ -11,8 +11,8 @@ export function Footer() {
   return (
     <AnimatePresence>
     <motion.section  id="help"  whileInView={{ backgroundColor: "#eff6ff",transition:{
-      duration:0.8,
-      delay:0.8,
+      duration:1,
+      delay:0.4,
       ease:"easeInOut"
     } }}
       initial={{ backgroundColor: "#ffff" }}

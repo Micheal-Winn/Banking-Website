@@ -65,8 +65,8 @@ export const Navbar = () => {
               to={item.link}
               spy={true}
               smooth={true}
-              offset={-70}
-              duration={500}
+              offset={-10}
+              duration={800}
               className="hover:cursor-pointer font-bold hover:text-blue-500"
               activeStyle={{
                 color:"#3b82f6",
