@@ -91,7 +91,7 @@ export const Navbar = () => {
             onClick={() => router.push("/auth")}
             className="w-[140px] bg-inherit border-[1px] border-[#5063C9] py-[10px] rounded-full text-[#5063C9] hover:bg-[#5063C9] hover:text-white"
           >
-            Sign In
+            Sign Out
           </motion.button>
         </motion.div>
 
