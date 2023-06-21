@@ -6,7 +6,7 @@ import Input from "./Input";
 export const Auth = () => {
   const theme = useMantineTheme();
   return (
-    <div className=" flex flex-col justify-center gap-28 w-full md:w-1/2 xl:gap-20  xl:w-[30%]">
+    <section className=" flex flex-col justify-center gap-28 w-full md:w-1/2 xl:gap-20  xl:w-[30%]">
       <div className="mt-8 lg:mt-0">
         <h4 className="text-center text-xl xl:text-2xl">SmartSave</h4>
       </div>
@@ -22,7 +22,7 @@ export const Auth = () => {
 
         <Tabs
           variant="pills"
-          color="dark"
+          color="violet.9"
           radius="sm"
           defaultValue="signin"
           className="w-[70%] mx-auto flex mt-4 flex-col sm:w-[55%] md:w-4/5 lg:w-[75%]"
@@ -57,6 +57,6 @@ export const Auth = () => {
         finances.Log in to access your personalized dashboard, track your
         portfolio performance, and make informed investment decisions.
       </p>
-    </div>
+    </section>
   );
 };

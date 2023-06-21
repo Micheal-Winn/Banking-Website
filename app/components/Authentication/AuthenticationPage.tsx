@@ -10,10 +10,12 @@ type Props = {}
 
 const AuthenticationPage = (props: Props) => {
   return (
-    <Container>
+   
+        <section className='flex flex-row-reverse w-full  bg-inherit'>
         <Auth/>
         <SidePhoto/>
-    </Container>
+        </section>
+   
   )
 }
 

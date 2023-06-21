@@ -8,9 +8,9 @@ const Container:React.FC<ContainerProps> = ({
     children
 })=> {
     return(
-        <div className="w-full flex bg-inherit flex-row-reverse">
+        <section className="w-full  bg-inherit ">
             {children}
-        </div>
+        </section>
     )
 }
 

@@ -1,4 +1,6 @@
 import './globals.css'
+import Provider from './provider'
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='bg-[#FFFFFF]'>{children}</body>
+      <body className='bg-[#FFFFFF]'>
+        <Provider>
+        {children}
+        </Provider>
+      </body>
     </html>
   )
 }

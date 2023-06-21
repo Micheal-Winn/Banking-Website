@@ -1,3 +1,5 @@
+"use client"
+
 import { MantineProvider, TextInput ,Text, useMantineTheme,rem} from '@mantine/core'
 import styled from '@emotion/styled'
 import React from 'react'
