@@ -72,6 +72,7 @@ export const Navbar = () => {
                 color:"#3b82f6",
                 
               }}
+              style={{fontSize:14}}
             >{item.name}</ScrollLink>
             
           ))}

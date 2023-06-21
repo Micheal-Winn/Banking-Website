@@ -101,7 +101,7 @@ const BannerHome = () => {
             </motion.span>
           ))}
         </motion.div>
-        <motion.p  initial="hidden" whileInView={"show"} variants={paragraph}  className="text-[#C9D0DD] text-center md:text-left 2xl:text-xl xl:text-lg lg:text-base md:text-sm sm:text-[1rem] text-sm w-[96%] sm:w-[80%] mx-auto md:mx-0 md:w-full lg:w-[85%] sm:leading-6">
+        <motion.p  initial="hidden" whileInView={"show"} variants={paragraph}  className="text-[#C9D0DD] text-center md:text-left 2xl:text-base xl:text-lg lg:text-base md:text-sm sm:text-[1rem] text-sm w-[96%] sm:w-[80%] mx-auto md:mx-0 md:w-full lg:w-[85%] sm:leading-6">
           It is time to make the world of finance simpler, smarter and fit for
           modern life.You can get started modern banking instantly with our
           banking application !
