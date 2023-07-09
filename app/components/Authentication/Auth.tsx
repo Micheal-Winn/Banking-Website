@@ -1,18 +1,27 @@
 "use client";
 import { Tabs, Box, Text } from "@mantine/core";
-import { useMantineTheme } from "@mantine/core";
 import Input from "./Input";
+import { IconArrowLeft } from "@tabler/icons-react";
+import { useRouter } from "next/navigation";
 
 export const Auth = () => {
-  const theme = useMantineTheme();
+  const router = useRouter();
   return (
-    <section className=" flex flex-col justify-center gap-28 w-full md:w-1/2 xl:gap-20  xl:w-[30%]">
+    <section className=" flex flex-col justify-center gap-12 w-full md:w-1/2 xl:gap-10 2xl:gap-16 xl:w-[30%]">
+      <button
+        onClick={()=>router.push('/')}
+      className="mt-6 md:mt-0 ml-3 md:ml-0 bg-[#373396] hover:bg-blue-900 w-[140px] py-2 px-2 rounded-md flex items-center justify-center text-white gap-1">
+        <IconArrowLeft size={"1rem"} />
+        <span className="text-xs md:text-sm">Back to Main</span>
+      </button>
       <div className="mt-8 lg:mt-0">
         <h4 className="text-center text-xl xl:text-2xl">SmartSave</h4>
       </div>
       <div className="flex flex-col">
         <div>
-          <h4 className="text-2xl font-medium text-center xl:text-3xl xl:mb-1">Welcome back</h4>
+          <h4 className="text-2xl font-medium text-center xl:text-3xl xl:mb-1">
+            Welcome back
+          </h4>
           <p className="text-center text-[10px] text-gray-400 xl:text-xs xl:mb-3">
             Welcome back. Please enter Your details
           </p>

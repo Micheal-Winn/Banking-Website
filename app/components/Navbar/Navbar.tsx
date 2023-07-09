@@ -7,48 +7,68 @@ import { Burger, Drawer, MediaQuery, Text } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { useRouter } from "next/navigation";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { IconMenu2 } from "@tabler/icons-react";
 
 const navContainer = {
-  hidden:{opacity:0},
-  show:{
-    opacity:1,
-    transition:{
-      staggerChildren:0.4,
-      ease:"easeInOut"
-    }
-  }
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.4,
+      ease: "easeInOut",
+    },
+  },
 };
 
 const navItem = {
-  hidden:{opacity:0,y:40},
-  show:{
-    opacity:1,
-    y:0,
-    transition:{
-      duration:2,
-      type:"spring",
-      ease:"easeInOut"
-    }
-  }
-}
-
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 2,
+      type: "spring",
+      ease: "easeInOut",
+    },
+  },
+};
 
 export const Navbar = () => {
   const router = useRouter();
-  const [opened, { toggle }] = useDisclosure(false);
-  const label = opened ? "Close navigation" : "Open navigation";
+  // const [opened, { toggle }] = useDisclosure(false);
+  // const label = opened ? "Close navigation" : "Open navigation";
 
   return (
-    <>
-      <nav className="flex items-center justify-between px-4 md:px-8 lg:px-8 xl:px-14 pt-6 w-full h-[70px]">
-        <motion.div initial={{opacity:0,y:40}} animate={{opacity:1,y:0,transition:{duration:2,ease:"easeInOut",type:"spring"}}}>
-          <Link href={"/"} className="text-[#2F3460] font-bold text-xl">
-            Smart Save
-          </Link>
-        </motion.div>
-        <motion.div className="hidden lg:block overflow-hidden" initial="hidden" animate="show" variants={navContainer} >
-          {/* <ul className="flex gap-20 lg:gap-8 xl:gap-16 2xl:gap-24 items-center justify-items-center">
+    <nav className="flex items-center justify-between px-4 md:px-8 lg:px-8 xl:px-14 pt-6 w-full h-[70px]">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 2, ease: "easeInOut", type: "spring" },
+        }}
+      >
+        <Link href={"/"} className="text-[#2F3460] font-bold text-xl">
+          Smart Save
+        </Link>
+      </motion.div>
+      <motion.div
+        className="hidden lg:block overflow-hidden"
+        initial="hidden"
+        animate="show"
+        variants={navContainer}
+      >
+        {/* <ul className="flex gap-20 lg:gap-8 xl:gap-16 2xl:gap-24 items-center justify-items-center">
             {navLists.map((li, index) => (
               <Link href={li.link} key={index}>
                 <li className="text-[#A6B1C4] active:text-blue-500 font-bold hover:text-blue-500">
@@ -57,10 +77,13 @@ export const Navbar = () => {
               </Link>
             ))}
           </ul> */}
-           <motion.div className="flex gap-20 lg:gap-8 xl:gap-16 2xl:gap-24 items-center justify-items-center" variants={navItem}>
-          {navLists.map((item,index)=>(
-           
-              <ScrollLink key={index}
+        <motion.div
+          className="flex gap-20 lg:gap-8 xl:gap-16 2xl:gap-24 items-center justify-items-center"
+          variants={navItem}
+        >
+          {navLists.map((item, index) => (
+            <ScrollLink
+              key={index}
               activeClass="active"
               to={item.link}
               spy={true}
@@ -69,39 +92,80 @@ export const Navbar = () => {
               duration={800}
               className="hover:cursor-pointer font-bold hover:text-blue-500"
               activeStyle={{
-                color:"#3b82f6",
-                
+                color: "#3b82f6",
               }}
-              style={{fontSize:14}}
-            >{item.name}</ScrollLink>
-            
+              style={{ fontSize: 14 }}
+            >
+              {item.name}
+            </ScrollLink>
           ))}
+        </motion.div>
+      </motion.div>
+      <motion.div
+        className=" items-center lg:gap-4  hidden lg:flex"
+        initial="hidden"
+        animate="show"
+        variants={navContainer}
+      >
+        <motion.button
+          variants={navItem}
+          onClick={() => router.push("/auth")}
+          className="w-[140px] bg-[#EBEDF9] py-[10px] rounded-full text-[#5063C9] hover:bg-[#5063C9] hover:text-white"
+        >
+          Sign In
+        </motion.button>
+
+        <motion.button
+          variants={navItem}
+          onClick={() => router.push("/auth")}
+          className="w-[140px] bg-inherit border-[1px] border-[#5063C9] py-[10px] rounded-full text-[#5063C9] hover:bg-[#5063C9] hover:text-white"
+        >
+          Sign Out
+        </motion.button>
+      </motion.div>
+      <Sheet>
+        <SheetTrigger className="block lg:hidden">
+          <IconMenu2 />
+        </SheetTrigger>
+        <SheetContent side={"left"}>
+          <SheetTitle>Menu</SheetTitle>
+          <motion.div
+            className="flex gap-20 items-center justify-items-center flex-col mt-14"
+            variants={navItem}
+          >
+            {navLists.map((item, index) => (
+              <ScrollLink
+                key={index}
+                activeClass="active"
+                to={item.link}
+                spy={true}
+                smooth={true}
+                offset={-10}
+                duration={800}
+                className="hover:cursor-pointer font-bold hover:text-blue-500"
+                activeStyle={{
+                  color: "#3b82f6",
+                }}
+                style={{ fontSize: 14 }}
+              >
+                <SheetClose>
+                {item.name}
+                </SheetClose>
+              </ScrollLink>
+            ))}
           </motion.div>
-        </motion.div>
-        <motion.div className=" items-center lg:gap-4  hidden lg:flex" initial="hidden" animate="show" variants={navContainer}>
-          <motion.button
-            variants={navItem}
-            onClick={() => router.push("/auth")}
-            className="w-[140px] bg-[#EBEDF9] py-[10px] rounded-full text-[#5063C9] hover:bg-[#5063C9] hover:text-white"
-          >
-            Sign In
-          </motion.button>
+        </SheetContent>
+      </Sheet>
 
-          <motion.button
-            variants={navItem}
-            onClick={() => router.push("/auth")}
-            className="w-[140px] bg-inherit border-[1px] border-[#5063C9] py-[10px] rounded-full text-[#5063C9] hover:bg-[#5063C9] hover:text-white"
-          >
-            Sign Out
-          </motion.button>
-        </motion.div>
-
-        <MediaQuery largerThan={"md"} styles={{ display: "none" }}>
+      {/* <MediaQuery largerThan={"md"} styles={{ display: "none" }}>
           <Burger opened={opened} onClick={toggle} aria-label={label} />
-        </MediaQuery>
-      </nav>
+        </MediaQuery> */}
+    </nav>
+  );
+};
 
-      <Drawer
+{
+  /* <Drawer
         opened={opened}
         onClose={toggle}
         title={<Text className="font-bold text-xl">Menu</Text>}
@@ -123,7 +187,5 @@ export const Navbar = () => {
             </li>
           ))}
         </ul>
-      </Drawer>
-    </>
-  );
-};
+      </Drawer> */
+}

@@ -10,7 +10,7 @@ import FeatureSection from './components/HeroSections/FeatureSection/FeatureSect
 import BusinessSection from './components/HeroSections/BusinessSection/BusinessSection'
 import QuestionSection from './components/HeroSections/QuestionSection'
 import {Footer} from './components/HeroSections/FooterSection/Footer'
-import ScrollToTop from './utils/Scroll/ScrollToTop'
+import { ScrollToTop } from './utils/Scroll/ScrollToTop'
 
 
 
@@ -22,7 +22,7 @@ export default function Home() {
     <main className='bg-[#FFFFFF]'>
       <Navbar/>
       <BannerHome/>
-      <FeatureSection/>
+     <FeatureSection/> 
       <BusinessSection/>
       <QuestionSection/>
       <Footer/>

@@ -70,7 +70,7 @@ const rightAnimateIcon = {
 
 const FeatureSection = () => {
   return (
-    <section id="features" className="min-h-screen flex flex-col pt-12">
+    <section id="features" className="min-h-screen flex flex-col pt-12 overflow-hidden">
       {/** Provide feature */}
       <div className="flex flex-col text-center">
         <motion.div initial="hidden" whileInView={"show"} variants={featureIconContainer} className="flex flex-col gap-4">
